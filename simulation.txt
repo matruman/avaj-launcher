@@ -1,0 +1,180 @@
+Tower says: Baloon#B1(1) registered to weather tower.
+Tower says: Baloon#B2(2) registered to weather tower.
+Tower says: JetPlane#J1(3) registered to weather tower.
+Tower says: Helicopter#H1(4) registered to weather tower.
+Tower says: Helicopter#H2(5) registered to weather tower.
+Tower says: Helicopter#H3(6) registered to weather tower.
+Tower says: Baloon#B3(7) registered to weather tower.
+Tower says: JetPlane#J2(8) registered to weather tower.
+Tower says: Helicopter#H4(9) registered to weather tower.
+Baloon#B1(1): it is snowy.
+Baloon#B2(2): it is sunny.
+JetPlane#J1(3): c'est brumeux.
+Helicopter#H1(4): it's cloudy outside. I am in a bad mood.
+Helicopter#H2(5): it is sunny outside. Let is go for a walk.
+Helicopter#H3(6): it's foggy outside, I can't see anything.
+Baloon#B3(7): it is sunny.
+JetPlane#J2(8): c'est brumeux.
+Helicopter#H4(9): it's foggy outside, I can't see anything.
+Baloon#B1(1): it is snowy.
+Baloon#B1(1): landing.
+Tower says: Baloon#B1(1) unregistered from weather tower.
+Baloon#B2(2): it is sunny.
+JetPlane#J1(3): il neige.
+Helicopter#H1(4): it's foggy outside, I can't see anything.
+Helicopter#H2(5): it is sunny outside. Let is go for a walk.
+Helicopter#H3(6): There's a lot of snow outside.
+Baloon#B3(7): it is foggy.
+JetPlane#J2(8): c'est ensoleillé.
+Helicopter#H4(9): it is sunny outside. Let is go for a walk.
+Baloon#B2(2): it is snowy.
+JetPlane#J1(3): c'est brumeux.
+Helicopter#H1(4): it's foggy outside, I can't see anything.
+Helicopter#H2(5): it is sunny outside. Let is go for a walk.
+Helicopter#H3(6): it's cloudy outside. I am in a bad mood.
+Baloon#B3(7): it is sunny.
+JetPlane#J2(8): c'est ensoleillé.
+Helicopter#H4(9): There's a lot of snow outside.
+Baloon#B2(2): it is foggy.
+JetPlane#J1(3): c'est ensoleillé.
+Helicopter#H1(4): it's foggy outside, I can't see anything.
+Helicopter#H2(5): it's foggy outside, I can't see anything.
+Helicopter#H3(6): it's foggy outside, I can't see anything.
+Baloon#B3(7): it is foggy.
+JetPlane#J2(8): il neige.
+Helicopter#H4(9): it's foggy outside, I can't see anything.
+Baloon#B2(2): it is rainy.
+JetPlane#J1(3): il pleut.
+Helicopter#H1(4): it's cloudy outside. I am in a bad mood.
+Helicopter#H2(5): it is sunny outside. Let is go for a walk.
+Helicopter#H3(6): it's cloudy outside. I am in a bad mood.
+Baloon#B3(7): it is snowy.
+JetPlane#J2(8): c'est ensoleillé.
+Helicopter#H4(9): it's cloudy outside. I am in a bad mood.
+Baloon#B2(2): it is sunny.
+JetPlane#J1(3): il neige.
+Helicopter#H1(4): it's cloudy outside. I am in a bad mood.
+Helicopter#H2(5): it's cloudy outside. I am in a bad mood.
+Helicopter#H3(6): There's a lot of snow outside.
+Baloon#B3(7): it is sunny.
+JetPlane#J2(8): il neige.
+Helicopter#H4(9): it's cloudy outside. I am in a bad mood.
+Baloon#B2(2): it is foggy.
+JetPlane#J1(3): il neige.
+Helicopter#H1(4): There's a lot of snow outside.
+Helicopter#H2(5): it's foggy outside, I can't see anything.
+Helicopter#H3(6): it's cloudy outside. I am in a bad mood.
+Baloon#B3(7): it is foggy.
+JetPlane#J2(8): il pleut.
+Helicopter#H4(9): it is sunny outside. Let is go for a walk.
+Baloon#B2(2): it is rainy.
+JetPlane#J1(3): il pleut.
+Helicopter#H1(4): There's a lot of snow outside.
+Helicopter#H1(4): landing.
+Tower says: Helicopter#H1(4) unregistered from weather tower.
+Helicopter#H2(5): it's cloudy outside. I am in a bad mood.
+Helicopter#H3(6): it's foggy outside, I can't see anything.
+Baloon#B3(7): it is foggy.
+JetPlane#J2(8): il neige.
+Helicopter#H4(9): There's a lot of snow outside.
+Baloon#B2(2): it is rainy.
+JetPlane#J1(3): c'est brumeux.
+Helicopter#H2(5): it's cloudy outside. I am in a bad mood.
+Helicopter#H3(6): it is sunny outside. Let is go for a walk.
+Baloon#B3(7): it is snowy.
+JetPlane#J2(8): c'est ensoleillé.
+Helicopter#H4(9): There's a lot of snow outside.
+Baloon#B2(2): it is foggy.
+JetPlane#J1(3): c'est ensoleillé.
+Helicopter#H2(5): it is sunny outside. Let is go for a walk.
+Helicopter#H3(6): it's foggy outside, I can't see anything.
+Baloon#B3(7): it is rainy.
+Baloon#B3(7): landing.
+Tower says: Baloon#B3(7) unregistered from weather tower.
+JetPlane#J2(8): c'est ensoleillé.
+Helicopter#H4(9): it's foggy outside, I can't see anything.
+Baloon#B2(2): it is rainy.
+JetPlane#J1(3): il pleut.
+Helicopter#H2(5): it is sunny outside. Let is go for a walk.
+Helicopter#H3(6): it's foggy outside, I can't see anything.
+JetPlane#J2(8): c'est brumeux.
+Helicopter#H4(9): it's foggy outside, I can't see anything.
+Baloon#B2(2): it is foggy.
+JetPlane#J1(3): il pleut.
+Helicopter#H2(5): There's a lot of snow outside.
+Helicopter#H3(6): it's cloudy outside. I am in a bad mood.
+JetPlane#J2(8): il pleut.
+Helicopter#H4(9): it's cloudy outside. I am in a bad mood.
+Baloon#B2(2): it is snowy.
+JetPlane#J1(3): c'est ensoleillé.
+Helicopter#H2(5): it is sunny outside. Let is go for a walk.
+Helicopter#H3(6): There's a lot of snow outside.
+JetPlane#J2(8): il neige.
+Helicopter#H4(9): it is sunny outside. Let is go for a walk.
+Baloon#B2(2): it is foggy.
+JetPlane#J1(3): c'est brumeux.
+Helicopter#H2(5): it's cloudy outside. I am in a bad mood.
+Helicopter#H3(6): There's a lot of snow outside.
+JetPlane#J2(8): c'est ensoleillé.
+Helicopter#H4(9): it's foggy outside, I can't see anything.
+Baloon#B2(2): it is sunny.
+JetPlane#J1(3): c'est brumeux.
+Helicopter#H2(5): it's foggy outside, I can't see anything.
+Helicopter#H3(6): it is sunny outside. Let is go for a walk.
+JetPlane#J2(8): c'est ensoleillé.
+Helicopter#H4(9): There's a lot of snow outside.
+Baloon#B2(2): it is sunny.
+JetPlane#J1(3): c'est brumeux.
+Helicopter#H2(5): it's cloudy outside. I am in a bad mood.
+Helicopter#H3(6): it is sunny outside. Let is go for a walk.
+JetPlane#J2(8): il pleut.
+Helicopter#H4(9): it's foggy outside, I can't see anything.
+Baloon#B2(2): it is foggy.
+JetPlane#J1(3): il pleut.
+Helicopter#H2(5): There's a lot of snow outside.
+Helicopter#H3(6): it's cloudy outside. I am in a bad mood.
+JetPlane#J2(8): c'est ensoleillé.
+Helicopter#H4(9): it's cloudy outside. I am in a bad mood.
+Baloon#B2(2): it is snowy.
+JetPlane#J1(3): il pleut.
+Helicopter#H2(5): There's a lot of snow outside.
+Helicopter#H3(6): it is sunny outside. Let is go for a walk.
+JetPlane#J2(8): c'est brumeux.
+Helicopter#H4(9): There's a lot of snow outside.
+Helicopter#H4(9): landing.
+Tower says: Helicopter#H4(9) unregistered from weather tower.
+Baloon#B2(2): it is sunny.
+JetPlane#J1(3): il pleut.
+Helicopter#H2(5): it is sunny outside. Let is go for a walk.
+Helicopter#H3(6): it's foggy outside, I can't see anything.
+JetPlane#J2(8): il neige.
+Baloon#B2(2): it is foggy.
+JetPlane#J1(3): c'est ensoleillé.
+Helicopter#H2(5): it is sunny outside. Let is go for a walk.
+Helicopter#H3(6): it's cloudy outside. I am in a bad mood.
+JetPlane#J2(8): c'est brumeux.
+Baloon#B2(2): it is sunny.
+JetPlane#J1(3): c'est brumeux.
+Helicopter#H2(5): it is sunny outside. Let is go for a walk.
+Helicopter#H3(6): it is sunny outside. Let is go for a walk.
+JetPlane#J2(8): il neige.
+Baloon#B2(2): it is sunny.
+JetPlane#J1(3): c'est ensoleillé.
+Helicopter#H2(5): it's foggy outside, I can't see anything.
+Helicopter#H3(6): it's foggy outside, I can't see anything.
+JetPlane#J2(8): c'est brumeux.
+Baloon#B2(2): it is snowy.
+Baloon#B2(2): landing.
+Tower says: Baloon#B2(2) unregistered from weather tower.
+JetPlane#J1(3): c'est brumeux.
+Helicopter#H2(5): There's a lot of snow outside.
+Helicopter#H3(6): it's foggy outside, I can't see anything.
+JetPlane#J2(8): c'est brumeux.
+JetPlane#J1(3): c'est brumeux.
+Helicopter#H2(5): it's foggy outside, I can't see anything.
+Helicopter#H3(6): it's cloudy outside. I am in a bad mood.
+JetPlane#J2(8): c'est ensoleillé.
+JetPlane#J1(3): il neige.
+Helicopter#H2(5): it's foggy outside, I can't see anything.
+Helicopter#H3(6): it's foggy outside, I can't see anything.
+JetPlane#J2(8): c'est brumeux.
