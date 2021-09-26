@@ -7,8 +7,8 @@ public class Coordinates {
 
     public Coordinates(int longitude, int latitude, int height) {
         this.longitude = longitude;
-        this.latitude = latitude;
         this.height = Math.min(height, 100);
+        this.latitude = latitude;
     }
 
     public int getLongitude() {

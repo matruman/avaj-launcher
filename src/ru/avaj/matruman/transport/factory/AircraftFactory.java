@@ -1,12 +1,17 @@
-package ru.avaj.matruman.transport;
+package ru.avaj.matruman.transport.factory;
 
-import ru.avaj.matruman.exceptions.AvajLauncherException;
+import ru.avaj.matruman.exceptions.AvajException;
+import ru.avaj.matruman.transport.Coordinates;
+import ru.avaj.matruman.transport.items.Flyable;
+import ru.avaj.matruman.transport.items.impl.Baloon;
+import ru.avaj.matruman.transport.items.impl.Helicopter;
+import ru.avaj.matruman.transport.items.impl.JetPlane;
 
 public class AircraftFactory {
     public static Flyable newAircraft(String type, String name, int longitude, int latitude, int height) {
 
         if (longitude <= 0 || latitude <= 0 || height <= 0) {
-            throw new AvajLauncherException("Coordinates must be positive numbers");
+            throw new AvajException("Coordinates must be positive numbers");
         }
         Coordinates coordinates = new Coordinates(longitude, latitude, height);
 
@@ -18,7 +23,7 @@ public class AircraftFactory {
             case "jetplane":
                 return new JetPlane(name, coordinates);
             default:
-                throw new AvajLauncherException("Unknown aircraft type:" + type);
+                throw new AvajException("Unknown aircraft type:" + type);
         }
     }
 }

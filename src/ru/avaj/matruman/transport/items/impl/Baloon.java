@@ -1,7 +1,10 @@
-package ru.avaj.matruman.transport;
+package ru.avaj.matruman.transport.items.impl;
 
 import ru.avaj.matruman.Writer;
-import ru.avaj.matruman.weather.WeatherTower;
+import ru.avaj.matruman.transport.items.Aircraft;
+import ru.avaj.matruman.transport.Coordinates;
+import ru.avaj.matruman.transport.items.Flyable;
+import ru.avaj.matruman.weather.tower.WeatherTower;
 
 public class Baloon extends Aircraft implements Flyable {
     private WeatherTower weatherTower;
@@ -22,7 +25,7 @@ public class Baloon extends Aircraft implements Flyable {
                         coordinates.getLatitude(),
                         coordinates.getHeight() + 4
                 );
-                message = "it's sunny now";
+                message = "It's sunny now";
                 break;
             case "RAIN":
                 coordinates = new Coordinates(
@@ -30,7 +33,7 @@ public class Baloon extends Aircraft implements Flyable {
                         coordinates.getLatitude(),
                         coordinates.getHeight() - 5
                 );
-                message = "it's raining now";
+                message = "It's raining now";
                 break;
             case "FOG":
                 coordinates = new Coordinates(
@@ -38,7 +41,7 @@ public class Baloon extends Aircraft implements Flyable {
                         coordinates.getLatitude(),
                         coordinates.getHeight() - 3
                 );
-                message = "we are in the fog";
+                message = "We are in the fog";
                 break;
             case "SNOW":
                 coordinates = new Coordinates(
@@ -46,7 +49,7 @@ public class Baloon extends Aircraft implements Flyable {
                         coordinates.getLatitude(),
                         coordinates.getHeight() - 15
                 );
-                message = "now it is snowing";
+                message = "It's snowing now";
                 break;
         }
         Writer.write("Baloon#" + name + "(" + id + "): " + message + ".\n");

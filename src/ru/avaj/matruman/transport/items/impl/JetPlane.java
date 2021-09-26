@@ -1,7 +1,10 @@
-package ru.avaj.matruman.transport;
+package ru.avaj.matruman.transport.items.impl;
 
 import ru.avaj.matruman.Writer;
-import ru.avaj.matruman.weather.WeatherTower;
+import ru.avaj.matruman.transport.items.Aircraft;
+import ru.avaj.matruman.transport.Coordinates;
+import ru.avaj.matruman.transport.items.Flyable;
+import ru.avaj.matruman.weather.tower.WeatherTower;
 
 public class JetPlane extends Aircraft implements Flyable {
     private WeatherTower weatherTower;
@@ -17,7 +20,7 @@ public class JetPlane extends Aircraft implements Flyable {
 
         switch (weather) {
             case "SUN":
-                message = "c'est ensoleillé";
+                message = "С'est ensoleillé. Il fait beau";
                 coordinates = new Coordinates(
                         coordinates.getLongitude(),
                         coordinates.getLatitude() + 10,
@@ -25,7 +28,7 @@ public class JetPlane extends Aircraft implements Flyable {
                 );
                 break;
             case "RAIN":
-                message = "il pleut";
+                message = "Il pleut. Je n'aime pas ce temps";
                 coordinates = new Coordinates(
                         coordinates.getLongitude(),
                         coordinates.getLatitude() + 5,
@@ -33,7 +36,7 @@ public class JetPlane extends Aircraft implements Flyable {
                 );
                 break;
             case "FOG":
-                message = "c'est brumeux";
+                message = "Nous sommes dans le brouillard";
                 coordinates = new Coordinates(
                         coordinates.getLongitude(),
                         coordinates.getLatitude() + 1,
@@ -41,7 +44,7 @@ public class JetPlane extends Aircraft implements Flyable {
                 );
                 break;
             case "SNOW":
-                message = "il neige";
+                message = "Il neige. J'ai froid";
                 coordinates = new Coordinates(
                         coordinates.getLongitude(),
                         coordinates.getLatitude(),

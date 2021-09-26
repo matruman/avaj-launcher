@@ -1,5 +1,7 @@
 package ru.avaj.matruman.weather;
 
+import ru.avaj.matruman.weather.tower.WeatherTower;
+
 public class WeatherTowerWrapper {
     private final int iterations;
     private final WeatherTower weatherTower;

@@ -1,28 +1,29 @@
 package ru.avaj.matruman;
 
-import ru.avaj.matruman.exceptions.AvajLauncherException;
-import ru.avaj.matruman.transport.AircraftFactory;
-import ru.avaj.matruman.weather.WeatherTower;
-import ru.avaj.matruman.weather.WeatherTowerWrapper;
+import ru.avaj.matruman.exceptions.AvajException;
+import ru.avaj.matruman.transport.factory.AircraftFactory;
+import ru.avaj.matruman.weather.tower.WeatherTower;
 
 import java.io.*;
 import java.util.Scanner;
 
 public class Main {
 
+    private static int ITERATIONS = 0;
+
     public static void main(String[] args) {
         try {
             if (args.length != 1 || args[0] == null) {
-                throw new AvajLauncherException("put scenario file as first arg");
+                throw new AvajException("Put scenario file as first argument");
             }
-            WeatherTowerWrapper wrapper = getWrapper(args[0]);
+            WeatherTower weatherTower = getWeatherTower(args[0]);
 
-            for (int i = 0; i < wrapper.getIterations(); i++) {
-                wrapper.getWeatherTower().changeWeather();
+            for (int i = 0; i < ITERATIONS; i++) {
+                weatherTower.changeWeather();
             }
             Writer.close();
         }
-        catch (AvajLauncherException e) {
+        catch (AvajException e) {
             System.out.println("Error: " + e.getMessage());
         }
         catch (Exception e) {
@@ -30,11 +31,11 @@ public class Main {
         }
     }
 
-    private static WeatherTowerWrapper getWrapper(String fileName) throws FileNotFoundException {
+    private static WeatherTower getWeatherTower(String fileName) throws FileNotFoundException {
         Scanner scanner = getScanner(fileName);
 
         if (!scanner.hasNextLine()) {
-            throw new AvajLauncherException("File is empty");
+            throw new AvajException("File is empty");
         }
         int iterations = getIterations(scanner);
 
@@ -49,7 +50,7 @@ public class Main {
                 continue ;
             }
             if (arr.length != 5) {
-                throw new AvajLauncherException("Wrong number in line " + lineIndex + ": " + line + "." +
+                throw new AvajException("Wrong number in line " + lineIndex + ": " + line + "." +
                         " Current format: TYPE NAME LONGITUDE LATITUDE HEIGHT.");
             }
             try {
@@ -62,15 +63,17 @@ public class Main {
                 ).registerTower(weatherTower);
             }
             catch (NumberFormatException e) {
-                throw new AvajLauncherException("Wrong number in line " + lineIndex + ": " + line + "." +
-                        " Current format: TYPE NAME LONGITUDE LATITUDE HEIGHT.");
+                throw new AvajException("Wrong number in line " + lineIndex + ": " + line + "." +
+                        " Current format: " +
+                        "TYPE NAME LONGITUDE LATITUDE HEIGHT.");
             }
         }
 
         if (weatherTower.observersIsEmpty()) {
-            throw new AvajLauncherException("Aircrafts dont present in scenario file");
+            throw new AvajException("Aircrafts isn't present in scenario file");
         }
-        return new WeatherTowerWrapper(iterations, weatherTower);
+        ITERATIONS = iterations;
+        return weatherTower;
     }
 
     private static int getIterations(Scanner scanner) {
@@ -78,12 +81,12 @@ public class Main {
             int iterations = Integer.parseInt(scanner.nextLine());
 
             if (iterations <= 0) {
-                throw new AvajLauncherException("Number of the iteration must be positive");
+                throw new AvajException("Number of the iterations must be positive");
             }
             return iterations;
         }
         catch (NumberFormatException e) {
-            throw new AvajLauncherException("First line must be number of iterations. " +
+            throw new AvajException("First line must be number of iterations. " +
                     "Number must be a positive integer.");
         }
     }
@@ -92,7 +95,7 @@ public class Main {
         File file = new File(fileName);
 
         if (!file.canRead()) {
-            throw new AvajLauncherException("cant read file: " + fileName);
+            throw new AvajException("Cannot read the file: " + fileName);
         }
         return new Scanner(file);
     }

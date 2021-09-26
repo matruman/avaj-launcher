@@ -1,7 +1,10 @@
-package ru.avaj.matruman.transport;
+package ru.avaj.matruman.transport.items.impl;
 
 import ru.avaj.matruman.Writer;
-import ru.avaj.matruman.weather.WeatherTower;
+import ru.avaj.matruman.transport.items.Aircraft;
+import ru.avaj.matruman.transport.Coordinates;
+import ru.avaj.matruman.transport.items.Flyable;
+import ru.avaj.matruman.weather.tower.WeatherTower;
 
 public class Helicopter extends Aircraft implements Flyable {
     private WeatherTower weatherTower;
@@ -22,7 +25,7 @@ public class Helicopter extends Aircraft implements Flyable {
                         coordinates.getLatitude(),
                         coordinates.getHeight() + 2
                 );
-                message = "it is sunny outside. Let is go for a walk";
+                message = "It is sunny outside. I like it";
                 break;
             case "RAIN":
                 coordinates = new Coordinates(
@@ -30,7 +33,7 @@ public class Helicopter extends Aircraft implements Flyable {
                         coordinates.getLatitude(),
                         coordinates.getHeight()
                 );
-                message = "it's so cloudy outside. I am in a bad mood";
+                message = "It's so cloudy outside. I am in a bad mood";
                 break;
             case "FOG":
                 coordinates = new Coordinates(
@@ -38,7 +41,7 @@ public class Helicopter extends Aircraft implements Flyable {
                         coordinates.getLatitude(),
                         coordinates.getHeight()
                 );
-                message = "it's foggy outside, I can't see anything";
+                message = "It's foggy outside. I can't see anything";
                 break;
             case "SNOW":
                 coordinates = new Coordinates(
@@ -46,7 +49,7 @@ public class Helicopter extends Aircraft implements Flyable {
                         coordinates.getLatitude(),
                         coordinates.getHeight() - 12
                 );
-                message = "There's a lot of snow outside";
+                message = "There's so lot of snow outside";
                 break;
         }
         Writer.write("Helicopter#" + name + "(" + id + "): " + message + ".\n");

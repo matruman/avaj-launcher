@@ -1,4 +1,4 @@
-package ru.avaj.matruman.weather;
+package ru.avaj.matruman.weather.provider;
 
 import ru.avaj.matruman.transport.Coordinates;
 

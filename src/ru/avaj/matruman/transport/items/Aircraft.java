@@ -1,4 +1,6 @@
-package ru.avaj.matruman.transport;
+package ru.avaj.matruman.transport.items;
+
+import ru.avaj.matruman.transport.Coordinates;
 
 public abstract class Aircraft {
     protected long id;
