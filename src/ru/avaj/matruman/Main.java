@@ -1,7 +1,7 @@
 package ru.avaj.matruman;
 
-import ru.avaj.matruman.exceptions.AvajException;
-import ru.avaj.matruman.transport.factory.AircraftFactory;
+import ru.avaj.matruman.exceptions.AvajLauncherException;
+import ru.avaj.matruman.aircrafts.factory.AircraftFactory;
 import ru.avaj.matruman.weather.tower.WeatherTower;
 
 import java.io.*;
@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args) {
         try {
             if (args.length != 1 || args[0] == null) {
-                throw new AvajException("Put scenario file as first argument");
+                throw new AvajLauncherException("Put scenario file as first argument");
             }
             WeatherTower weatherTower = getWeatherTower(args[0]);
 
@@ -23,11 +23,8 @@ public class Main {
             }
             Writer.close();
         }
-        catch (AvajException e) {
-            System.out.println("Error: " + e.getMessage());
-        }
         catch (Exception e) {
-            System.out.println("Unknown error: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());
         }
     }
 
@@ -35,7 +32,7 @@ public class Main {
         Scanner scanner = getScanner(fileName);
 
         if (!scanner.hasNextLine()) {
-            throw new AvajException("File is empty");
+            throw new AvajLauncherException("File is empty");
         }
         int iterations = getIterations(scanner);
 
@@ -50,7 +47,7 @@ public class Main {
                 continue ;
             }
             if (arr.length != 5) {
-                throw new AvajException("Wrong number in line " + lineIndex + ": " + line + "." +
+                throw new AvajLauncherException("Wrong number in line " + lineIndex + ": " + line + "." +
                         " Current format: TYPE NAME LONGITUDE LATITUDE HEIGHT.");
             }
             try {
@@ -63,14 +60,14 @@ public class Main {
                 ).registerTower(weatherTower);
             }
             catch (NumberFormatException e) {
-                throw new AvajException("Wrong number in line " + lineIndex + ": " + line + "." +
+                throw new AvajLauncherException("Wrong number in line " + lineIndex + ": " + line + "." +
                         " Current format: " +
                         "TYPE NAME LONGITUDE LATITUDE HEIGHT.");
             }
         }
 
         if (weatherTower.observersIsEmpty()) {
-            throw new AvajException("Aircrafts isn't present in scenario file");
+            throw new AvajLauncherException("Aircrafts aren't present in scenario file");
         }
         ITERATIONS = iterations;
         return weatherTower;
@@ -81,12 +78,12 @@ public class Main {
             int iterations = Integer.parseInt(scanner.nextLine());
 
             if (iterations <= 0) {
-                throw new AvajException("Number of the iterations must be positive");
+                throw new AvajLauncherException("Number of the iterations must be positive");
             }
             return iterations;
         }
         catch (NumberFormatException e) {
-            throw new AvajException("First line must be number of iterations. " +
+            throw new AvajLauncherException("First line must be number of iterations. " +
                     "Number must be a positive integer.");
         }
     }
@@ -95,7 +92,7 @@ public class Main {
         File file = new File(fileName);
 
         if (!file.canRead()) {
-            throw new AvajException("Cannot read the file: " + fileName);
+            throw new AvajLauncherException("Cannot read the file: " + fileName);
         }
         return new Scanner(file);
     }

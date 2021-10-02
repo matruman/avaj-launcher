@@ -1,4 +1,4 @@
-package ru.avaj.matruman.transport;
+package ru.avaj.matruman.aircrafts;
 
 public class Coordinates {
     private final int longitude;

@@ -1,6 +1,6 @@
 package ru.avaj.matruman;
 
-import ru.avaj.matruman.exceptions.AvajException;
+import ru.avaj.matruman.exceptions.AvajLauncherException;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -13,7 +13,7 @@ public class Writer {
         try {
             fileWriter = new FileWriter(FILENAME);
         } catch (IOException e) {
-            throw new AvajException(e);
+            throw new AvajLauncherException(e);
         }
     }
 
@@ -21,7 +21,7 @@ public class Writer {
         try {
             fileWriter.write(str);
         } catch (IOException e) {
-            throw new AvajException(e);
+            throw new AvajLauncherException(e);
         }
     }
 
@@ -32,7 +32,7 @@ public class Writer {
                 fileWriter.close();
             }
         } catch (IOException e) {
-            throw new AvajException(e);
+            throw new AvajLauncherException(e);
         }
     }
 }

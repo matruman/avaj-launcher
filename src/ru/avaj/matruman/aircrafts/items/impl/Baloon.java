@@ -1,9 +1,9 @@
-package ru.avaj.matruman.transport.items.impl;
+package ru.avaj.matruman.aircrafts.items.impl;
 
 import ru.avaj.matruman.Writer;
-import ru.avaj.matruman.transport.items.Aircraft;
-import ru.avaj.matruman.transport.Coordinates;
-import ru.avaj.matruman.transport.items.Flyable;
+import ru.avaj.matruman.aircrafts.items.Aircraft;
+import ru.avaj.matruman.aircrafts.Coordinates;
+import ru.avaj.matruman.aircrafts.items.Flyable;
 import ru.avaj.matruman.weather.tower.WeatherTower;
 
 public class Baloon extends Aircraft implements Flyable {
