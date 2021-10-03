@@ -1,7 +1,7 @@
 package ru.avaj.matruman;
 
 import ru.avaj.matruman.exceptions.AvajLauncherException;
-import ru.avaj.matruman.aircrafts.factory.AircraftFactory;
+import ru.avaj.matruman.items.factory.AircraftFactory;
 import ru.avaj.matruman.weather.tower.WeatherTower;
 
 import java.io.*;
@@ -37,18 +37,18 @@ public class Main {
         int iterations = getIterations(scanner);
 
         WeatherTower weatherTower = new WeatherTower();
-        int lineIndex = 1;
+        int lineNumber = 1;
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             String[] arr = line.split(" ");
-            ++lineIndex;
+            ++lineNumber;
 
             if (arr.length == 1 && arr[0].length() == 0) {
                 continue ;
             }
             if (arr.length != 5) {
-                throw new AvajLauncherException("Wrong number in line " + lineIndex + ": " + line + "." +
-                        " Current format: TYPE NAME LONGITUDE LATITUDE HEIGHT.");
+                throw new AvajLauncherException("Wrong format in line " + lineNumber + ": " + line + "." +
+                        " Required format: TYPE NAME LONGITUDE LATITUDE HEIGHT.");
             }
             try {
                 AircraftFactory.newAircraft(
@@ -60,9 +60,7 @@ public class Main {
                 ).registerTower(weatherTower);
             }
             catch (NumberFormatException e) {
-                throw new AvajLauncherException("Wrong number in line " + lineIndex + ": " + line + "." +
-                        " Current format: " +
-                        "TYPE NAME LONGITUDE LATITUDE HEIGHT.");
+                throw new AvajLauncherException("Wrong number at line " + lineNumber + "\n" + e.getMessage());
             }
         }
 

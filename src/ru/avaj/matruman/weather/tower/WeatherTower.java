@@ -1,6 +1,6 @@
 package ru.avaj.matruman.weather.tower;
 
-import ru.avaj.matruman.aircrafts.Coordinates;
+import ru.avaj.matruman.items.Coordinates;
 import ru.avaj.matruman.weather.provider.WeatherProvider;
 
 public class WeatherTower extends Tower {

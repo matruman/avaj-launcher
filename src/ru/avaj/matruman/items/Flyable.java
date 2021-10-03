@@ -1,4 +1,4 @@
-package ru.avaj.matruman.aircrafts.items;
+package ru.avaj.matruman.items;
 
 import ru.avaj.matruman.weather.tower.WeatherTower;
 

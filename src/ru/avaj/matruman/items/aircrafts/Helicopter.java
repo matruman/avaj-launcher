@@ -1,18 +1,17 @@
-package ru.avaj.matruman.aircrafts.items.impl;
+package ru.avaj.matruman.items.aircrafts;
 
 import ru.avaj.matruman.Writer;
-import ru.avaj.matruman.aircrafts.items.Aircraft;
-import ru.avaj.matruman.aircrafts.Coordinates;
-import ru.avaj.matruman.aircrafts.items.Flyable;
+import ru.avaj.matruman.items.Coordinates;
+import ru.avaj.matruman.items.Flyable;
 import ru.avaj.matruman.weather.tower.WeatherTower;
 
-public class JetPlane extends Aircraft implements Flyable {
+public class Helicopter extends Aircraft implements Flyable {
     private WeatherTower weatherTower;
 
-    public JetPlane(String name, Coordinates coordinates) {
+    public Helicopter(String name, Coordinates coordinates) {
         super(name, coordinates);
     }
-
+  
     @Override
     public void updateConditions() {
         String weather = weatherTower.getWeather(coordinates);
@@ -20,49 +19,50 @@ public class JetPlane extends Aircraft implements Flyable {
 
         switch (weather) {
             case "SUN":
-                message = "С'est ensoleillé. Il fait beau";
                 coordinates = new Coordinates(
-                        coordinates.getLongitude(),
-                        coordinates.getLatitude() + 10,
+                        coordinates.getLongitude() + 10,
+                        coordinates.getLatitude(),
                         coordinates.getHeight() + 2
                 );
+                message = "It's sunny outside. I like it";
                 break;
             case "RAIN":
-                message = "Il pleut. Je n'aime pas ce temps";
                 coordinates = new Coordinates(
-                        coordinates.getLongitude(),
-                        coordinates.getLatitude() + 5,
+                        coordinates.getLongitude() + 5,
+                        coordinates.getLatitude(),
                         coordinates.getHeight()
                 );
+                message = "It's so cloudy outside. I'm in a bad mood";
                 break;
             case "FOG":
-                message = "Nous sommes dans le brouillard";
                 coordinates = new Coordinates(
-                        coordinates.getLongitude(),
-                        coordinates.getLatitude() + 1,
+                        coordinates.getLongitude() + 1,
+                        coordinates.getLatitude(),
                         coordinates.getHeight()
                 );
+                message = "It's foggy outside. Visibility worsens";
                 break;
             case "SNOW":
-                message = "Il neige. J'ai froid";
                 coordinates = new Coordinates(
                         coordinates.getLongitude(),
                         coordinates.getLatitude(),
-                        coordinates.getHeight() - 7
+                        coordinates.getHeight() - 12
                 );
+                message = "There's so lot of snow outside";
                 break;
         }
-        Writer.write("JetPlane#" + name + "(" + id + "): " + message + ".\n");
+        Writer.write("Helicopter#" + name + "(" + id + "): " + message + ".\n");
         if (coordinates.getHeight() <= 0) {
             weatherTower.unregister(this);
-            Writer.write("JetPlane#" + name + "(" + id + "): landing.\n");
-            Writer.write("Tower says: JetPlane#" + name + "(" + id + ")" + " unregistered from weather tower.\n");
+            Writer.write("Helicopter#" + name + "(" + id + "): landing.\n");
+            Writer.write("Tower says: Helicopter#" + name + "(" + id + ")" + " unregistered from weather tower.\n");
         }
     }
 
+    @Override
     public void registerTower(WeatherTower weatherTower) {
         this.weatherTower = weatherTower;
         this.weatherTower.register(this);
-        Writer.write("Tower says: JetPlane#" + name + "(" + id + ")" + " registered to weather tower.\n");
+        Writer.write("Tower says: Helicopter#" + name + "(" + id + ")" + " registered to weather tower.\n");
     }
 }

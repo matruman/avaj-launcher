@@ -1,6 +1,6 @@
 package ru.avaj.matruman.weather.tower;
 
-import ru.avaj.matruman.aircrafts.items.Flyable;
+import ru.avaj.matruman.items.Flyable;
 
 import java.util.ArrayList;
 import java.util.List;

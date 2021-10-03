@@ -1,6 +1,6 @@
 package ru.avaj.matruman.weather.provider;
 
-import ru.avaj.matruman.aircrafts.Coordinates;
+import ru.avaj.matruman.items.Coordinates;
 
 import java.util.Random;
 

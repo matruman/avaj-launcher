@@ -1,11 +1,11 @@
-package ru.avaj.matruman.aircrafts.factory;
+package ru.avaj.matruman.items.factory;
 
 import ru.avaj.matruman.exceptions.AvajLauncherException;
-import ru.avaj.matruman.aircrafts.Coordinates;
-import ru.avaj.matruman.aircrafts.items.Flyable;
-import ru.avaj.matruman.aircrafts.items.impl.Baloon;
-import ru.avaj.matruman.aircrafts.items.impl.Helicopter;
-import ru.avaj.matruman.aircrafts.items.impl.JetPlane;
+import ru.avaj.matruman.items.Coordinates;
+import ru.avaj.matruman.items.Flyable;
+import ru.avaj.matruman.items.aircrafts.Baloon;
+import ru.avaj.matruman.items.aircrafts.Helicopter;
+import ru.avaj.matruman.items.aircrafts.JetPlane;
 
 public class AircraftFactory {
     public static Flyable newAircraft(String type, String name, int longitude, int latitude, int height) {
